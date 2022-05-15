@@ -34,4 +34,4 @@ main()
     process.exit(1);
   });
 
-// Crypto Devs Token Contract Address: 0x5ECcbD37023F2e8A7314fb7E36F62deBd844af03
+// Crypto Devs Token Contract Address: 0x7289211b658C7521BB8464D15dc7f2d819A736A5

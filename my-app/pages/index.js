@@ -57,8 +57,8 @@ export default function Home() {
         signer
       );
 
-      // Each token is of `0.001 ether`. The value we need to send is `0.001 * amount`
-      const value = 0.001 * amount;
+      // Each token is of `0.0001 ether`. The value we need to send is `0.0001 * amount`
+      const value = 0.0001 * amount;
       const tx = await tokenContract.mint(amount, {
         value: utils.parseEther(value.toString()),
       });
@@ -181,11 +181,11 @@ export default function Home() {
     const provider = await web3ModalRef.current.connect();
     const web3Provider = new providers.Web3Provider(provider);
 
-    // If user is not connected to the Rinkeby network, let them know and throw an error
+    // If user is not connected to the Goerli network, let them know and throw an error
     const { chainId } = await web3Provider.getNetwork();
-    if (chainId !== 4) {
-      window.alert("Change the network to Rinkeby");
-      throw new Error("Change network to Rinkeby");
+    if (chainId !== 5) {
+      window.alert("Change the network to Goerli");
+      throw new Error("Change network to Goerli");
     }
 
     if (needSigner) {
@@ -223,7 +223,7 @@ export default function Home() {
     if (!walletConnected) {
       // 1. We need to assign web3ModalRef to a web3modal instance
       web3ModalRef.current = new Web3Modal({
-        network: "rinkeby",
+        network: "goerli",
         providerOptions: {},
         disableInjectedProvider: false,
       });

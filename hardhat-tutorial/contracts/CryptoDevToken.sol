@@ -7,7 +7,7 @@
 
   contract CryptoDevToken is ERC20, Ownable{
     // Price of one Crypto Dev token
-    uint public constant tokenPrice = 0.001 ether;
+    uint public constant tokenPrice = 0.0001 ether;
 
     // CryptoDevsNFT contract instance
     ICryptoDevs CryptoDevsNFT;
